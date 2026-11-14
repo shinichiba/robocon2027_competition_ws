@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+<world name="competition_arena">
+  <physics name="physics" type="ignored">
+    <max_step_size>0.01</max_step_size><real_time_factor>1.0</real_time_factor>
+    <real_time_update_rate>100</real_time_update_rate>
+  </physics>
+  <gravity>0 0 -9.81</gravity>
+  <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+  <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+  <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+  <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors"><render_engine>ogre2</render_engine></plugin>
+  <light name="sun" type="directional"><pose>0 0 10 0 0 0</pose><direction>-0.4 0.2 -1</direction><diffuse>0.8 0.8 0.8 1</diffuse><specular>0.2 0.2 0.2 1</specular></light>
+  <model name="floor"><static>true</static><pose>0 0 -0.025 0 0 0</pose><link name="link">
+    <collision name="c"><geometry><box><size>11 11 0.05</size></box></geometry>
+      <surface><friction><ode><mu>0.8</mu><mu2>0.8</mu2></ode></friction></surface></collision>
+    <visual name="v"><geometry><box><size>11 11 0.05</size></box></geometry>
+      <material><ambient>0.7 0.7 0.7 1</ambient><diffuse>0.7 0.7 0.7 1</diffuse></material></visual>
+  </link></model>
+  <model name="north_wall"><static>true</static><pose>0 5.475 0.15 0 0 0</pose><link name="wall">
+      <collision name="c"><geometry><box><size>11 0.05 1.30</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>11 0.05 1.30</size></box></geometry></visual>
+    </link></model>
+  <model name="south_wall"><static>true</static><pose>0 -5.475 0.15 0 0 0</pose><link name="wall">
+      <collision name="c"><geometry><box><size>11 0.05 1.30</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>11 0.05 1.30</size></box></geometry></visual>
+    </link></model>
+  <model name="east_wall"><static>true</static><pose>5.475 0 0.15 0 0 0</pose><link name="wall">
+      <collision name="c"><geometry><box><size>0.05 11 1.30</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>0.05 11 1.30</size></box></geometry></visual>
+    </link></model>
+  <model name="west_wall"><static>true</static><pose>-5.475 0 0.15 0 0 0</pose><link name="wall">
+      <collision name="c"><geometry><box><size>0.05 11 1.30</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>0.05 11 1.30</size></box></geometry></visual>
+    </link></model>
+  <model name="centre_stack_platform"><static>true</static><pose>0 0 0.05 0 0 0</pose><link name="platform">
+    <collision name="c"><geometry><box><size>0.5 0.5 0.1</size></box></geometry></collision>
+    <visual name="v"><geometry><box><size>0.5 0.5 0.1</size></box></geometry>
+      <material><ambient>0.2 0.7 0.2 1</ambient><diffuse>0.2 0.7 0.2 1</diffuse></material></visual>
+  </link></model>
+
+  <model name="robot1_start_zone"><static>true</static><pose>-4.7 -4.7 0.002 0 0 0</pose><link name="z"><visual name="v"><geometry><box><size>1 1 0.004</size></box></geometry><material><ambient>0.1 0.2 0.9 0.3</ambient><diffuse>0.1 0.2 0.9 0.3</diffuse></material></visual></link></model>
+  <model name="robot2_start_zone"><static>true</static><pose>4.7 4.7 0.002 0 0 0</pose><link name="z"><visual name="v"><geometry><box><size>1 1 0.004</size></box></geometry><material><ambient>0.9 0.2 0.1 0.3</ambient><diffuse>0.9 0.2 0.1 0.3</diffuse></material></visual></link></model>
+  <model name="cube_r1_01"><pose>-3.70 -3.70 0.175 0 0 0</pose><link name="cube">
+          <inertial><mass>0.6</mass><inertia><ixx>0.01225</ixx><iyy>0.01225</iyy><izz>0.01225</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia></inertial>
+          <collision name="c"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <surface><friction><ode><mu>1.2</mu><mu2>1.2</mu2></ode></friction></surface></collision>
+          <visual name="v"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <material><ambient>0.1 0.25 0.9 1</ambient><diffuse>0.1 0.25 0.9 1</diffuse></material></visual>
+        </link></model>
+  <model name="cube_r1_02"><pose>-3.30 -3.70 0.175 0 0 0</pose><link name="cube">
+          <inertial><mass>0.6</mass><inertia><ixx>0.01225</ixx><iyy>0.01225</iyy><izz>0.01225</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia></inertial>
+          <collision name="c"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <surface><friction><ode><mu>1.2</mu><mu2>1.2</mu2></ode></friction></surface></collision>
+          <visual name="v"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <material><ambient>0.1 0.25 0.9 1</ambient><diffuse>0.1 0.25 0.9 1</diffuse></material></visual>
+        </link></model>
+  <model name="cube_r1_03"><pose>-3.70 -3.30 0.175 0 0 0</pose><link name="cube">
+          <inertial><mass>0.6</mass><inertia><ixx>0.01225</ixx><iyy>0.01225</iyy><izz>0.01225</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia></inertial>
+          <collision name="c"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <surface><friction><ode><mu>1.2</mu><mu2>1.2</mu2></ode></friction></surface></collision>
+          <visual name="v"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <material><ambient>0.1 0.25 0.9 1</ambient><diffuse>0.1 0.25 0.9 1</diffuse></material></visual>
+        </link></model>
+  <model name="cube_r1_04"><pose>-3.30 -3.30 0.175 0 0 0</pose><link name="cube">
+          <inertial><mass>0.6</mass><inertia><ixx>0.01225</ixx><iyy>0.01225</iyy><izz>0.01225</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia></inertial>
+          <collision name="c"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <surface><friction><ode><mu>1.2</mu><mu2>1.2</mu2></ode></friction></surface></collision>
+          <visual name="v"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <material><ambient>0.1 0.25 0.9 1</ambient><diffuse>0.1 0.25 0.9 1</diffuse></material></visual>
+        </link></model>
+  <model name="cube_r1_05"><pose>-3.70 -3.70 0.525 0 0 0</pose><link name="cube">
+          <inertial><mass>0.6</mass><inertia><ixx>0.01225</ixx><iyy>0.01225</iyy><izz>0.01225</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia></inertial>
+          <collision name="c"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <surface><friction><ode><mu>1.2</mu><mu2>1.2</mu2></ode></friction></surface></collision>
+          <visual name="v"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <material><ambient>0.1 0.25 0.9 1</ambient><diffuse>0.1 0.25 0.9 1</diffuse></material></visual>
+        </link></model>
+  <model name="cube_r2_01"><pose>3.70 3.70 0.175 0 0 0</pose><link name="cube">
+          <inertial><mass>0.6</mass><inertia><ixx>0.01225</ixx><iyy>0.01225</iyy><izz>0.01225</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia></inertial>
+          <collision name="c"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <surface><friction><ode><mu>1.2</mu><mu2>1.2</mu2></ode></friction></surface></collision>
+          <visual name="v"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <material><ambient>0.9 0.2 0.1 1</ambient><diffuse>0.9 0.2 0.1 1</diffuse></material></visual>
+        </link></model>
+  <model name="cube_r2_02"><pose>3.30 3.70 0.175 0 0 0</pose><link name="cube">
+          <inertial><mass>0.6</mass><inertia><ixx>0.01225</ixx><iyy>0.01225</iyy><izz>0.01225</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia></inertial>
+          <collision name="c"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <surface><friction><ode><mu>1.2</mu><mu2>1.2</mu2></ode></friction></surface></collision>
+          <visual name="v"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <material><ambient>0.9 0.2 0.1 1</ambient><diffuse>0.9 0.2 0.1 1</diffuse></material></visual>
+        </link></model>
+  <model name="cube_r2_03"><pose>3.70 3.30 0.175 0 0 0</pose><link name="cube">
+          <inertial><mass>0.6</mass><inertia><ixx>0.01225</ixx><iyy>0.01225</iyy><izz>0.01225</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia></inertial>
+          <collision name="c"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <surface><friction><ode><mu>1.2</mu><mu2>1.2</mu2></ode></friction></surface></collision>
+          <visual name="v"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <material><ambient>0.9 0.2 0.1 1</ambient><diffuse>0.9 0.2 0.1 1</diffuse></material></visual>
+        </link></model>
+  <model name="cube_r2_04"><pose>3.30 3.30 0.175 0 0 0</pose><link name="cube">
+          <inertial><mass>0.6</mass><inertia><ixx>0.01225</ixx><iyy>0.01225</iyy><izz>0.01225</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia></inertial>
+          <collision name="c"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <surface><friction><ode><mu>1.2</mu><mu2>1.2</mu2></ode></friction></surface></collision>
+          <visual name="v"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <material><ambient>0.9 0.2 0.1 1</ambient><diffuse>0.9 0.2 0.1 1</diffuse></material></visual>
+        </link></model>
+  <model name="cube_r2_05"><pose>3.70 3.70 0.525 0 0 0</pose><link name="cube">
+          <inertial><mass>0.6</mass><inertia><ixx>0.01225</ixx><iyy>0.01225</iyy><izz>0.01225</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia></inertial>
+          <collision name="c"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <surface><friction><ode><mu>1.2</mu><mu2>1.2</mu2></ode></friction></surface></collision>
+          <visual name="v"><geometry><box><size>0.35 0.35 0.35</size></box></geometry>
+            <material><ambient>0.9 0.2 0.1 1</ambient><diffuse>0.9 0.2 0.1 1</diffuse></material></visual>
+        </link></model>
+</world></sdf>
