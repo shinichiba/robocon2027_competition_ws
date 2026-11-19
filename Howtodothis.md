@@ -1,5 +1,19 @@
 # Hướng dẫn kết hợp ChatGPT và Google Gemini để xây dựng mô phỏng Gazebo sân đấu Robocon 2027 và chương trình điều khiển hai robot
-
+Bản hướng dẫn Raw:
+Các bước để kết hợp AI Chat GPT, google Gemini để tạo chương trình gazebo mô phỏng sân đấu Robocon 2027 và chương trình điều khiển 2 robot thi đấu cơ bản. 
+Bước 1: 
+Tạo promt để ChatGPT tạo mô phỏng cơ bản: 
+Hướng dẫn mô phỏng trên Gazebo kết nối với Ros2 Lyrical bao gồm 
+1 Sân thi đấu robot kích thước 11mx11m, ở 2 góc sân là vị trí đặt robot kích thước 1000mmx1000mm và vị trí đặt có sẵn 5 khối hộp hình vuông 350mmx350mm nặng 600g. Giữa sân có 1 vị trí kích thước 500mmx500mm để đặt robot gắp và đặt các khối hộp hình vuông. 
+Có 2 robot trên sân có đế robot kích thước 600mmx600mm gồm 4 bánh thường, mỗi robot có tay gắp và có thể nâng hạ khối hộp hình vuông 350mmx350mm nặng 600g. 
+Mỗi robot chạy giải thuật SLAM Naviation 2 riêng.  2 Sinh viên mỗi bạn viết chương trình riêng để điều khiển robot thi đấu gắp và xếp các khối hộp 350mmx350mm nặng 600g nhanh nhất có thể.
+Bước 2: 
+Chạy trương trình và sửa dần các lỗi về phiên bản,  thêm mô phỏng sân SDF đã vẽ, thiết kế lại robot .
+Các ví dụ Promt tiêu biểu: 
+Chương trình chạy châm hệ số mô phỏng World stats RTF chỉ 11%, nghĩa là mô phỏng chậm 10 lần so với thực tế, nguyên nhân đặt độ phân giải Lidar cao, Hiệu ứng shadow đổ bóng đang mặc đinh là có, hiệu ứng tương tác vật lý giảm tần số tính toán từ 1000HZ sang 100HZ giảm đáng kể khối lượng tính toán với máy tính yếu.  Mục tiêu tăng RTF lên 90-100%
+Tải file world.sdf và hỏi chatGPT : mô phỏng gazebo đang bị chạy chậm có cách nào để mô phỏng chạy nhanh hơn không. 
+Bước 3: Hoàn chỉnh bản demo và nâng cấp dần 
+Bản hướng dẫn qua Chat GPT
 ## 1. Mục tiêu
 
 Tài liệu này hướng dẫn quy trình sử dụng kết hợp **ChatGPT** và **Google Gemini** để xây dựng từng bước một hệ thống mô phỏng sân đấu Robocon 2027 trên **Gazebo**, kết nối với **ROS 2 Lyrical**, sau đó phát triển chương trình điều khiển cơ bản cho hai robot thi đấu.
