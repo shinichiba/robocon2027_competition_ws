@@ -1,3 +1,4 @@
+Cách tạo mô phỏng này:  [Cách tạo mô phỏng(Howtodothis.md).
 <img width="1818" height="970" alt="image" src="https://github.com/user-attachments/assets/1b4324a2-b4d9-446e-ab46-2c50d7c244ee" />
 
 # Two-robot competition simulation — ROS 2 Lyrical / Gazebo Sim Jetty
