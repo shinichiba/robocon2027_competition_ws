@@ -1,0 +1,40 @@
+"/robot1/controller_manager":
+  ros__parameters:
+    update_rate: 100
+    use_sim_time: true
+    joint_state_broadcaster: {type: joint_state_broadcaster/JointStateBroadcaster}
+    diff_drive_controller: {type: diff_drive_controller/DiffDriveController}
+    lift_position_controller: {type: forward_command_controller/ForwardCommandController}
+    gripper_position_controller: {type: forward_command_controller/ForwardCommandController}
+
+"/robot1/diff_drive_controller":
+  ros__parameters:
+    left_wheel_names: [robot1/left_front_wheel_joint, robot1/left_rear_wheel_joint]
+    right_wheel_names: [robot1/right_front_wheel_joint, robot1/right_rear_wheel_joint]
+    wheel_separation: 0.825
+    wheel_radius: 0.075
+    position_feedback: true
+    open_loop: false
+    use_stamped_vel: true
+    cmd_vel_timeout: 1.0
+    publish_rate: 50.0
+    odom_frame_id: odom
+    base_frame_id: base_footprint
+    tf_frame_prefix_enable: true
+    # Để trống chuỗi để controller tự động lấy namespace ("robot1") làm prefix
+    tf_frame_prefix: "" 
+    enable_odom_tf: false
+    linear.x.max_acceleration: 5.0
+    linear.x.max_deceleration: -7.0
+    angular.z.max_acceleration: 8.0
+    angular.z.max_deceleration: -10.0
+
+"/robot1/lift_position_controller":
+  ros__parameters:
+    joints: [robot1/lift_joint]
+    interface_name: position
+
+"/robot1/gripper_position_controller":
+  ros__parameters:
+    joints: [robot1/left_finger_joint, robot1/right_finger_joint]
+    interface_name: position

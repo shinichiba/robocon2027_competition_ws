@@ -1,0 +1,802 @@
+<?xml version="1.0" ?>
+<sdf version="1.11">
+  <model name="tr_frame">
+    <link name="base_link">
+      <inertial>
+        <mass>0.0001</mass>
+        <inertia>
+          <ixx>1e-09</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1e-09</iyy>
+          <iyz>0</iyz>
+          <izz>1e-09</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <link name="rigid_group_37_1">
+      <inertial>
+        <pose>0.0030467404801927337 -0.014918460832763249 0.0006049513449119423 0.0 -0.0 0.0</pose>
+        <mass>9.255270126018411</mass>
+        <inertia>
+          <ixx>0.1494495768883682</ixx>
+          <ixy>-0.0010451104922442802</ixy>
+          <ixz>-1.6528737304031574e-05</ixz>
+          <iyy>0.29680670856026187</iyy>
+          <iyz>-0.0001115232253772345</iyz>
+          <izz>0.1530884175289099</izz>
+        </inertia>
+      </inertial>
+      <visual name="rigid_group_37_1__body1_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="rigid_group_37_1__body2_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body2_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="rigid_group_37_1__body3_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body3_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="rigid_group_37_1__body4_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body4_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="rigid_group_37_1__body5_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body5_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="rigid_group_37_1__body6_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body6_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="rigid_group_37_1__body7_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body7_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="rigid_group_37_1__body8_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body8_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="rigid_group_37_1__body9_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body9_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="rigid_group_37_1__body10_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body10_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="rigid_group_37_1__body11_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body11_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="rigid_group_37_1__body1_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="rigid_group_37_1__body2_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body2_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="rigid_group_37_1__body3_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body3_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="rigid_group_37_1__body4_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body4_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="rigid_group_37_1__body5_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body5_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="rigid_group_37_1__body6_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body6_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="rigid_group_37_1__body7_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body7_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="rigid_group_37_1__body8_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body8_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="rigid_group_37_1__body9_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body9_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="rigid_group_37_1__body10_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body10_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="rigid_group_37_1__body11_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/rigid_group_37_1/body11_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="khungkep_1">
+      <pose relative_to="__model__">0.20742109261678746 0.01810746407515093 -0.09315223689149908 0.5602085178228475 -1.5707963267948966 0</pose>
+      <inertial>
+        <pose>0.11381049486764286 0.1919381386319774 -0.014038525740976868 -1.5707963267948961 1.010587808972049 -1.5707963267948961</pose>
+        <mass>2.09680842427066</mass>
+        <inertia>
+          <ixx>0.039527622902683385</ixx>
+          <ixy>0.01444264196665778</ixy>
+          <ixz>0.0017092289522015504</ixz>
+          <iyy>0.02382107876258213</iyy>
+          <iyz>-0.001219198708196756</iyz>
+          <izz>0.03444534400102081</izz>
+        </inertia>
+      </inertial>
+      <visual name="khungkep_1__body1_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/khungkep_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="khungkep_1__body1_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/khungkep_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="kep_1">
+      <pose relative_to="__model__">0.31751014191029564 0.38226882386532596 -0.05465223689149943 -0.5602085178228475 1.5707963267948966 0</pose>
+      <inertial>
+        <pose>-0.06499537296444802 -0.012370773625869264 -0.09462783742905148 1.570796326794892 -1.010587808972049 -1.570796326794891</pose>
+        <mass>1.0359429647902396</mass>
+        <inertia>
+          <ixx>0.0196193455341971</ixx>
+          <ixy>-0.006005079087967338</ixy>
+          <ixz>0.00837197390604483</ixz>
+          <iyy>0.028128461254143713</iyy>
+          <iyz>0.00413926753249717</iyz>
+          <izz>0.03316447422281105</izz>
+        </inertia>
+      </inertial>
+      <visual name="kep_1__body1_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/kep_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="kep_1__body1_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/kep_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="xilanh250_0_valor_predeterminado_1">
+      <pose relative_to="__model__">-0.14173868701203005 0.061747563634589324 0.10534776310849522 -1.0596458182495184e-15 -1.4468019182538825 2.1310048446177468</pose>
+      <inertial>
+        <pose>1.597535892548102e-08 -0.11543607899770643 -2.838949187491946e-05 -1.4247219669838054 -0.5554001382910243 -1.648216394065892</pose>
+        <mass>0.4072668345025978</mass>
+        <inertia>
+          <ixx>0.0012234150003715017</ixx>
+          <ixy>-0.0019087437356873856</ixy>
+          <ixz>-6.722384411975146e-08</ixz>
+          <iyy>0.0030705299562852</iyy>
+          <iyz>-2.9549800864905884e-08</iyz>
+          <izz>0.004267499041891517</izz>
+        </inertia>
+      </inertial>
+      <visual name="xilanh250_0_valor_predeterminado_1__body1_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh250_0_valor_predeterminado_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="xilanh250_0_valor_predeterminado_1__body2_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh250_0_valor_predeterminado_1/body2_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="xilanh250_0_valor_predeterminado_1__body3_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh250_0_valor_predeterminado_1/body3_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="xilanh250_0_valor_predeterminado_1__body4_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh250_0_valor_predeterminado_1/body4_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="xilanh250_0_valor_predeterminado_1__body1_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh250_0_valor_predeterminado_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="xilanh250_0_valor_predeterminado_1__body2_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh250_0_valor_predeterminado_1/body2_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="xilanh250_0_valor_predeterminado_1__body3_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh250_0_valor_predeterminado_1/body3_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="xilanh250_0_valor_predeterminado_1__body4_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh250_0_valor_predeterminado_1/body4_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="xilanh250_1_valor_predeterminado_1">
+      <pose relative_to="__model__">-0.026727718129442947 0.13388704974479773 0.1053477631084951 3.141592653589793 0.11167685751693124 2.131004844617745</pose>
+      <inertial>
+        <pose>5.1800164303783536e-08 0.1429374580441467 -1.7305010452470931e-07 -3.046875232383023 -0.059252328198014355 2.1281958109349532</pose>
+        <mass>0.06873361407329066</mass>
+        <inertia>
+          <ixx>0.00015407988555052364</ixx>
+          <ixy>-0.0002450177300888125</ixy>
+          <ixz>-1.2488241056497415e-09</ixz>
+          <iyy>0.0003910216937901415</iyy>
+          <iyz>-7.712035051364585e-10</iyz>
+          <izz>0.0005447070696888703</izz>
+        </inertia>
+      </inertial>
+      <visual name="xilanh250_1_valor_predeterminado_1__body1_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh250_1_valor_predeterminado_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="xilanh250_1_valor_predeterminado_1__body1_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh250_1_valor_predeterminado_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="xilanh50_1_valor_predeterminado_1">
+      <pose relative_to="__model__">0.06549606640047392 0.041881134511703735 0.07184776310850072 3.141592653589792 -9.327929162658407e-17 2.1257140250943394</pose>
+      <inertial>
+        <pose>2.9887510573703064e-08 0.059255025458630164 -5.488341700383184e-07 3.1415926535897922 -1.1872943425314777e-15 2.1257140250943394</pose>
+        <mass>0.03409714674034021</mass>
+        <inertia>
+          <ixx>1.2630698134682517e-05</ixx>
+          <ixy>-1.9737373376931076e-05</ixy>
+          <ixz>-4.3589977921686465e-10</ixz>
+          <iyy>3.223555714279775e-05</iyy>
+          <iyz>-2.666947236239659e-10</iyz>
+          <izz>4.448775573156409e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="xilanh50_1_valor_predeterminado_1__body1_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh50_1_valor_predeterminado_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="xilanh50_1_valor_predeterminado_1__body1_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh50_1_valor_predeterminado_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="xilanh50_0_valor_predeterminado_1">
+      <pose relative_to="__model__">0.022998876114421005 0.015537467003343974 0.07184776310850065 2.125714025094338 -1.5707963267948966 0</pose>
+      <inertial>
+        <pose>3.07526991208062e-08 -0.04137082293429825 -4.6748936831741164e-05 -1.5707963267948974 -0.5549176982994415 -1.570796326794895</pose>
+        <mass>0.2474599015563866</mass>
+        <inertia>
+          <ixx>0.00012990027866242437</ixx>
+          <ixy>-0.00018810930412122213</ixy>
+          <ixz>-3.148425025464169e-10</ixz>
+          <iyy>0.00031723947152304324</iyy>
+          <iyz>-6.418573734578298e-10</iyz>
+          <izz>0.00043380057038161176</izz>
+        </inertia>
+      </inertial>
+      <visual name="xilanh50_0_valor_predeterminado_1__body1_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh50_0_valor_predeterminado_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="xilanh50_0_valor_predeterminado_1__body2_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh50_0_valor_predeterminado_1/body2_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="xilanh50_0_valor_predeterminado_1__body3_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh50_0_valor_predeterminado_1/body3_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="xilanh50_0_valor_predeterminado_1__body4_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh50_0_valor_predeterminado_1/body4_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="xilanh50_0_valor_predeterminado_1__body1_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh50_0_valor_predeterminado_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="xilanh50_0_valor_predeterminado_1__body2_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh50_0_valor_predeterminado_1/body2_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="xilanh50_0_valor_predeterminado_1__body3_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh50_0_valor_predeterminado_1/body3_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="xilanh50_0_valor_predeterminado_1__body4_collision">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/xilanh50_0_valor_predeterminado_1/body4_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="component22_1">
+      <inertial>
+        <pose>0.1713603896932109 -0.025000000000000005 -0.17136038969321024 0.0 -0.0 0.0</pose>
+        <mass>2.663442251713425</mass>
+        <inertia>
+          <ixx>0.0036955261242523907</ixx>
+          <ixy>-1.214306433183765e-17</ixy>
+          <ixz>-0.0010986699288317858</ixz>
+          <iyy>0.002596856195420577</iyy>
+          <iyz>1.0408340855860843e-17</iyz>
+          <izz>0.0036955261242522935</izz>
+        </inertia>
+      </inertial>
+      <visual name="component22_1__body1_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/component22_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="component22_1__body1_collision">
+        <pose>0.1713603896932109 -0.025000000000000005 -0.17136038969321024 0.0 -0.7854 0.0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.06</radius>
+            <length>.03</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>  <!-- High friction going forward -->
+              <mu2>0.0</mu2> <!-- Zero friction sliding sideways -->
+              <fdir1>1 0 0</fdir1> <!-- Direction of forward friction -->
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+    </link>
+    <link name="component23_1">
+      <inertial>
+        <pose>-0.171360389693211 -0.025000000000000012 -0.1713603896932105 0.0 -0.0 0.0</pose>
+        <mass>2.6634422517134255</mass>
+        <inertia>
+          <ixx>0.0036955261242524323</ixx>
+          <ixy>3.469446951953614e-18</ixy>
+          <ixz>0.001098669928831772</ixz>
+          <iyy>0.002596856195420605</iyy>
+          <iyz>8.673617379884035e-18</iyz>
+          <izz>0.0036955261242523074</izz>
+        </inertia>
+      </inertial>
+      <visual name="component23_1__body1_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/component23_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="component23_1__body1_collision">
+        <pose>-0.171360389693211 -0.025000000000000012 -0.1713603896932105 0.0 0.7854 0.0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.06</radius>
+            <length>.03</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>  <!-- High friction going forward -->
+              <mu2>0.0</mu2> <!-- Zero friction sliding sideways -->
+              <fdir1>1 0 0</fdir1> <!-- Direction of forward friction -->
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+    </link>
+    <link name="component24_1">
+      <inertial>
+        <pose>-0.17136038969321113 -0.025000000000000036 0.17136038969321052 0.0 -0.0 0.0</pose>
+        <mass>2.663442251713425</mass>
+        <inertia>
+          <ixx>0.0036955261242524046</ixx>
+          <ixy>1.0408340855860843e-17</ixy>
+          <ixz>-0.0010986699288318136</ixz>
+          <iyy>0.0025968561954205216</iyy>
+          <iyz>-5.204170427930421e-18</iyz>
+          <izz>0.003695526124252224</izz>
+        </inertia>
+      </inertial>
+      <visual name="component24_1__body1_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/component24_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="component24_1__body1_collision">
+        <pose>-0.17136038969321113 -0.025000000000000036 0.17136038969321052 0.0 -0.7854 0.0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.06</radius>
+            <length>.03</length>
+          </cylinder>
+        </geometry>
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/component24_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>  <!-- High friction going forward -->
+              <mu2>0.0</mu2> <!-- Zero friction sliding sideways -->
+              <fdir1>1 0 0</fdir1> <!-- Direction of forward friction -->
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+    </link>
+    <link name="component25_1">
+      <inertial>
+        <pose>0.17136038969321096 -0.025 0.17136038969321044 0.0 -0.0 0.0</pose>
+        <mass>2.663442251713427</mass>
+        <inertia>
+          <ixx>0.0036955261242524184</ixx>
+          <ixy>-3.469446951953614e-18</ixy>
+          <ixz>0.0010986699288317858</ixz>
+          <iyy>0.002596856195420577</iyy>
+          <iyz>-1.734723475976807e-18</iyz>
+          <izz>0.0036955261242522797</izz>
+        </inertia>
+      </inertial>
+      <visual name="component25_1__body1_visual">
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>meshes/component25_1/body1_visual.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="component25_1__body1_collision">
+        <pose>0.17136038969321096 -0.025 0.17136038969321044 0.0 0.7854 0.0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.06</radius>
+            <length>.03</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>  <!-- High friction going forward -->
+              <mu2>0.0</mu2> <!-- Zero friction sliding sideways -->
+              <fdir1>1 0 0</fdir1> <!-- Direction of forward friction -->
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+    </link>
+    <link name="dummy_link">
+      <pose relative_to="__model__">0.15440018847889647 0.09699208693919266 0.06684776310850087 0.0 -0.0 0.0</pose>
+    </link>
+    <joint name="revolute_28" type="revolute">
+      <pose relative_to="__model__">0.005999999999999859 0.005000000000000033 0.06603995060850062 0.0 -0.0 0.0</pose>
+      <parent>rigid_group_37_1</parent>
+      <child>xilanh50_0_valor_predeterminado_1</child>
+      <axis>
+        <xyz expressed_in="__model__">-1.221746076484454e-15 -7.131050321729512e-16 1.0</xyz>
+      </axis>
+    </joint>
+    <joint name="revolute_29" type="revolute">
+      <pose relative_to="__model__">0.15440018847889647 0.09699208693919266 0.06684776310850087 0.0 -0.0 0.0</pose>
+      <parent>xilanh50_1_valor_predeterminado_1</parent>
+      <child>dummy_link</child>
+      <axis>
+        <xyz expressed_in="__model__">-1.1527859761317382e-15 -8.243503819672798e-16 1.0</xyz>
+      </axis>
+    </joint>
+    <joint name="slider_30" type="prismatic">
+      <pose relative_to="__model__">0.1314517057244279 0.08276650648467829 0.07184776310850081 0.0 -0.0 0.0</pose>
+      <parent>xilanh50_0_valor_predeterminado_1</parent>
+      <child>xilanh50_1_valor_predeterminado_1</child>
+      <axis>
+        <xyz expressed_in="__model__">0.8499438057210572 0.5268733501671968 1.4141315471940163e-15</xyz>
+        <limit>
+          <lower>0.0</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="revolute_31" type="revolute">
+      <pose relative_to="__model__">0.2089999999999973 0.025 0.10315223689149872 0.0 -0.0 0.0</pose>
+      <parent>rigid_group_37_1</parent>
+      <child>khungkep_1</child>
+      <axis>
+        <xyz expressed_in="__model__">1.5404344466674044e-14 0.0 -1.0</xyz>
+      </axis>
+    </joint>
+    <joint name="slider_32" type="prismatic">
+      <pose relative_to="__model__">0.1188429091437447 0.22519477757508066 0.10534776310849527 0.0 -0.0 0.0</pose>
+      <parent>xilanh250_0_valor_predeterminado_1</parent>
+      <child>xilanh250_1_valor_predeterminado_1</child>
+      <axis>
+        <xyz expressed_in="__model__">-0.8471443308055095 -0.5313628541628458 -1.2439505670826672e-16</xyz>
+        <limit>
+          <lower>-0.15</lower>
+          <upper>0.1</upper>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="rigid_40" type="fixed">
+      <parent>khungkep_1</parent>
+      <child>xilanh250_0_valor_predeterminado_1</child>
+      <axis/>
+    </joint>
+    <joint name="rigid_41" type="fixed">
+      <parent>xilanh250_1_valor_predeterminado_1</parent>
+      <child>kep_1</child>
+      <axis/>
+    </joint>
+    <joint name="revolute_42" type="revolute">
+      <pose relative_to="__model__">0.18196699141100922 -0.025 -0.18196699141100833 0.0 -0.0 0.0</pose>
+      <parent>rigid_group_37_1</parent>
+      <child>component22_1</child>
+      <axis>
+        <xyz expressed_in="__model__">0.7071067811865563 3.2273771043069105e-31 -0.7071067811865388</xyz>
+      </axis>
+    </joint>
+    <joint name="revolute_43" type="revolute">
+      <pose relative_to="__model__">-0.18196699141100933 -0.024999999999999994 -0.18196699141100858 0.0 -0.0 0.0</pose>
+      <parent>rigid_group_37_1</parent>
+      <child>component23_1</child>
+      <axis>
+        <xyz expressed_in="__model__">-0.7071067811865561 8.280776537135969e-31 -0.7071067811865389</xyz>
+      </axis>
+    </joint>
+    <joint name="revolute_44" type="revolute">
+      <pose relative_to="__model__">-0.1819669914110094 -0.02500000000000001 0.18196699141100856 0.0 -0.0 0.0</pose>
+      <parent>component24_1</parent>
+      <child>rigid_group_37_1</child>
+      <axis>
+        <xyz expressed_in="__model__">-0.7071067811865566 -1.1419022586599774e-31 0.7071067811865387</xyz>
+      </axis>
+    </joint>
+    <joint name="revolute_45" type="revolute">
+      <pose relative_to="__model__">0.18196699141100928 -0.025 0.18196699141100856 0.0 -0.0 0.0</pose>
+      <parent>rigid_group_37_1</parent>
+      <child>component25_1</child>
+      <axis>
+        <xyz expressed_in="__model__">0.7071067811865558 -9.12866719515245e-31 0.7071067811865392</xyz>
+      </axis>
+    </joint>
+    <joint name="base_link_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>component24_1</child>
+      <axis/>
+    </joint>
+<ros2_control name="GazeboSimSystem" type="system">
+      <hardware>
+        <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+      </hardware>
+      <joint name="slider_30">   <!-- lift --> 
+          <command_interface name="position">
+    <param name="min">0.0</param>
+    <param name="max">0.05</param>
+  </command_interface>
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+      <joint name="slider_32">   <!-- gripper --> 
+          <command_interface name="position">
+    <param name="min">-0.15</param>
+    <param name="max">0.1</param>
+  </command_interface>
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+      <joint name="revolute_42">
+        <command_interface name="velocity" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+      <joint name="revolute_43">
+        <command_interface name="velocity" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+      <joint name="revolute_44">
+        <command_interface name="velocity" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+      <joint name="revolute_45">
+        <command_interface name="velocity" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+    </ros2_control>
+     <plugin filename="libgz_ros2_control-system.so" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+<parameters>
+  /home/bblab2604/skid_steer_ws/install/builder_robot_sim/share/builder_robot_sim/config/controllers.yaml
+</parameters>
+      <controller_manager_prefix_node_name>controller_manager</controller_manager_prefix_node_name>
+    </plugin>
+    <self_collide>false</self_collide>
+  </model>
+</sdf>

@@ -44,19 +44,85 @@ colcon build --symlink-install
 source install/setup.bash
 ```
 
-## Launch
+## Xây dựng và lưu bản đồ (SLAM)
+
+Thực hiện lần lượt các bước dưới đây trong **4 terminal riêng biệt**. Giữ các terminal đang chạy cho đến khi hoàn tất quá trình tạo bản đồ.
+
+**Terminal 1 – Khởi động mô phỏng**
 
 ```bash
-ros2 launch robot_competition competition.launch.py
+ros2 launch robocon2027_competition_simulator competition.launch.py start_slam:=false start_navigation:=false
 ```
 
-For initial drive/TF validation without Nav2:
+**Terminal 2 – Khởi động SLAM cho robot1**
 
 ```bash
-ros2 launch robot_competition competition.launch.py start_navigation:=false
+ros2 launch robocon2027_competition_simulator mapping_robot1.launch.py
 ```
 
-Arguments: `gui:=true|false`, `start_navigation:=true|false`.
+**Terminal 3 – Mở RViz2**
+
+```bash
+ros2 launch robocon2027_competition_simulator rviz_robot1.launch.py
+```
+
+**Terminal 4 – Điều khiển robot bằng bàn phím**
+
+```bash
+ros2 run robocon2027_competition_simulator 1keyboard_control
+```
+
+Sử dụng bàn phím để điều khiển robot di chuyển qua các khu vực của sân thi đấu. Theo dõi bản đồ được cập nhật trên RViz2 và bảo đảm robot đã quét đủ khu vực cần thiết.
+
+### Lưu bản đồ
+
+Sau khi hoàn tất quá trình xây dựng bản đồ, mở một terminal mới và chạy:
+
+```bash
+ros2 run nav2_map_server map_saver_cli \
+  -t /robot1/map \
+  -f robot1_map
+```
+
+Lệnh trên lưu bản đồ với tên `robot1_map` tại thư mục làm việc hiện tại (thường tạo ra hai tệp `robot1_map.yaml` và `robot1_map.pgm`).
+
+## Chạy điều hướng bằng bản đồ đã lưu (Nav2)
+
+Sau khi đã tạo và lưu bản đồ, thực hiện lần lượt các bước dưới đây. Mở **5 terminal riêng biệt** và giữ các tiến trình đang chạy.
+
+**Terminal 1 – Khởi động mô phỏng, tắt SLAM và Navigation mặc định**
+
+```bash
+ros2 launch robocon2027_competition_simulator competition.launch.py start_slam:=false start_navigation:=false
+```
+
+**Terminal 2 – Khởi động Navigation cho robot1**
+
+```bash
+ros2 launch robocon2027_competition_simulator navigation_robot1.launch.py
+```
+
+**Terminal 3 – Mở RViz2**
+
+```bash
+ros2 launch robocon2027_competition_simulator rviz_robot1.launch.py
+```
+
+**Terminal 4 – Điều khiển robot bằng bàn phím (nếu cần)**
+
+```bash
+ros2 run robocon2027_competition_simulator 1keyboard_control
+```
+
+**Terminal 5 – Chạy chương trình gắp và đặt vật**
+
+```bash
+ros2 run robocon2027_competition_simulator robot1_pick_place
+```
+
+Trong RViz2, kiểm tra bản đồ và các khung tọa độ của robot. Sử dụng công cụ **2D Goal Pose** để gửi mục tiêu điều hướng nếu cần. Chương trình `robot1_pick_place` thực hiện quy trình gắp và đặt vật theo logic đã được cài đặt trong package.
+
+> **Lưu ý:** Phần điều hướng sử dụng bản đồ đã lưu cần được cấu hình để `navigation_robot1.launch.py` nạp đúng tệp `robot1_map.yaml`. Đặt tệp bản đồ tại đúng vị trí mà launch file đang tham chiếu, hoặc cập nhật đường dẫn trong cấu hình Navigation. Nếu bản đồ không hiển thị trong RViz2, kiểm tra lại đường dẫn bản đồ, topic `/robot1/map` và các khung TF.
 
 ## Validate
 

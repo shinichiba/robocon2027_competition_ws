@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="competition_robot">
+  <xacro:arg name="prefix" default="robot1/"/>
+  <xacro:arg name="robot_ns" default="robot1"/>
+  <xacro:arg name="robot_color" default="blue"/>
+  <xacro:property name="p" value="$(arg prefix)"/>
+  <xacro:property name="body_color" value="$(arg robot_color)"/>
+  <material name="blue"><color rgba="0.08 0.18 0.45 1"/></material>
+  <material name="red"><color rgba="0.85 0.05 0.05 1"/></material>
+  <material name="black"><color rgba="0.04 0.04 0.04 1"/></material>
+  <material name="steel"><color rgba="0.65 0.67 0.70 1"/></material>
+
+  <link name="${p}base_footprint"/>
+  <link name="${p}base_link">
+    <inertial><mass value="18"/><inertia ixx="0.9" ixy="0" ixz="0" iyy="0.9" iyz="0" izz="1.4"/></inertial>
+    <visual><geometry><box size="0.60 0.60 0.16"/></geometry><material name="${body_color}"/></visual>
+    <collision><geometry><box size="0.60 0.60 0.16"/></geometry></collision>
+  </link>
+  <joint name="${p}base_fixed" type="fixed"><parent link="${p}base_footprint"/><child link="${p}base_link"/><origin xyz="0 0 0.15"/></joint>
+
+  <xacro:macro name="wheel" params="n x y">
+    <link name="${p}${n}">
+      <inertial><mass value="0.8"/><inertia ixx="0.002" ixy="0" ixz="0" iyy="0.002" iyz="0" izz="0.002"/></inertial>
+      <visual><origin rpy="1.5707963 0 0"/><geometry><cylinder radius="0.075" length="0.05"/></geometry><material name="black"/></visual>
+      <collision><origin rpy="1.5707963 0 0"/><geometry><cylinder radius="0.075" length="0.05"/></geometry></collision>
+    </link>
+    <joint name="${p}${n}_joint" type="continuous"><parent link="${p}base_link"/><child link="${p}${n}"/><origin xyz="${x} ${y} -0.075"/><axis xyz="0 1 0"/><limit effort="60" velocity="100"/></joint>
+  </xacro:macro>
+  <xacro:wheel n="left_front_wheel" x="0.225" y="0.275"/>
+  <xacro:wheel n="left_rear_wheel" x="-0.225" y="0.275"/>
+  <xacro:wheel n="right_front_wheel" x="0.225" y="-0.275"/>
+  <xacro:wheel n="right_rear_wheel" x="-0.225" y="-0.275"/>
+
+  <link name="${p}lift_carriage">
+    <inertial><mass value="1.2"/><inertia ixx="0.02" ixy="0" ixz="0" iyy="0.02" iyz="0" izz="0.02"/></inertial>
+    <visual><geometry><box size="0.03 0.40 0.1"/></geometry><material name="red"/></visual>
+    <collision><geometry><box size="0.03 0.40 0.1"/></geometry></collision>
+  </link>
+  <joint name="${p}lift_joint" type="prismatic"><parent link="${p}base_link"/><child link="${p}lift_carriage"/><origin xyz="0.34 0 0.02"/><axis xyz="0 0 1"/><limit lower="-0.2" upper="1.3" effort="120" velocity="0.20"/><dynamics damping="8" friction="2"/></joint>
+
+  <link name="${p}left_finger">
+    <inertial><mass value="0.25"/><inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/></inertial>
+    <visual><geometry><box size="0.25 0.025 0.05"/></geometry><material name="blue"/></visual>
+    <collision><geometry><box size="0.25 0.025 0.05"/></geometry></collision>
+  </link>
+  <joint name="${p}left_finger_joint" type="prismatic"><parent link="${p}lift_carriage"/><child link="${p}left_finger"/><origin xyz="0.12 0.15 -0.02"/><axis xyz="0 -1 0"/><limit lower="-0.0825" upper="0.0825" effort="150" velocity="0.08"/><dynamics damping="5" friction="1"/></joint>
+
+  <link name="${p}right_finger">
+    <inertial><mass value="0.25"/><inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/></inertial>
+    <visual><geometry><box size="0.25 0.025 0.05"/></geometry><material name="blue"/></visual>
+    <collision><geometry><box size="0.25 0.025 0.05"/></geometry></collision>
+  </link>
+  <joint name="${p}right_finger_joint" type="prismatic"><parent link="${p}lift_carriage"/><child link="${p}right_finger"/><origin xyz="0.12 -0.15 -0.02"/><axis xyz="0 1 0"/><limit lower="-0.0825" upper="0.0825" effort="150" velocity="0.08"/><dynamics damping="5" friction="1"/></joint>
+
+  <link name="${p}laser_link">
+    <inertial><mass value="0.1"/><inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/></inertial>
+    <visual><geometry><cylinder radius="0.045" length="0.04"/></geometry><material name="steel"/></visual>
+  </link>
+  <joint name="${p}laser_fixed" type="fixed"><parent link="${p}base_link"/><child link="${p}laser_link"/><origin xyz="0 0 0.18"/></joint>
+
+<gazebo reference="${p}laser_link">
+  <sensor name="lidar" type="gpu_lidar">
+    <always_on>true</always_on>
+    <visualize>true</visualize>
+    <update_rate>15</update_rate>
+
+    <topic>/$(arg robot_ns)/scan</topic>
+    <!-- Frame ID phải trùng với frame trong URDF -->
+    <gz_frame_id>${p}laser_link</gz_frame_id>
+    <lidar>
+      <scan>
+        <horizontal>
+          <samples>720</samples>
+          <resolution>1</resolution>
+          <min_angle>-3.14159265</min_angle>
+          <max_angle>3.14159265</max_angle>
+        </horizontal>
+      </scan>
+
+      <range>
+        <min>0.1</min>
+        <max>12.0</max>
+        <resolution>0.01</resolution>
+      </range>
+    </lidar>
+  </sensor>
+</gazebo>
+
+  <ros2_control name="GazeboSimSystem" type="system">
+    <hardware><plugin>gz_ros2_control/GazeboSimSystem</plugin></hardware>
+    <xacro:macro name="wheel_interface" params="n">
+      <joint name="${p}${n}_joint"><command_interface name="velocity"><param name="min">-100</param><param name="max">100</param></command_interface><state_interface name="position"/><state_interface name="velocity"/></joint>
+    </xacro:macro>
+    <xacro:wheel_interface n="left_front_wheel"/><xacro:wheel_interface n="left_rear_wheel"/>
+    <xacro:wheel_interface n="right_front_wheel"/><xacro:wheel_interface n="right_rear_wheel"/>
+    <joint name="${p}lift_joint"><command_interface name="position"><param name="min">-0.2</param><param name="max">1.30</param></command_interface><state_interface name="position"/><state_interface name="velocity"/></joint>
+    <joint name="${p}left_finger_joint"><command_interface name="position"><param name="min">-0.0825</param><param name="max">0.0825</param></command_interface><state_interface name="position"/><state_interface name="velocity"/></joint>
+    <joint name="${p}right_finger_joint"><command_interface name="position"><param name="min">-0.0825</param><param name="max">0.0825</param></command_interface><state_interface name="position"/><state_interface name="velocity"/></joint>
+  </ros2_control>
+<!-- Cấu hình ma sát cao và chống trượt cho ngón kẹp trái -->
+  <gazebo reference="${p}left_finger">
+    <collision>
+      <surface>
+        <friction>
+          <ode>
+            <mu>100.0</mu>
+            <mu2>100.0</mu2>
+          </ode>
+        </friction>
+        <contact>
+          <ode>
+            <kp>100000.0</kp>
+            <kd>10.0</kd>
+            <max_vel>0.01</max_vel>
+            <min_depth>0.002</min_depth>
+          </ode>
+        </contact>
+      </surface>
+    </collision>
+  </gazebo>
+
+  <!-- Cấu hình ma sát cao và chống trượt cho ngón kẹp phải -->
+  <gazebo reference="${p}right_finger">
+    <collision>
+      <surface>
+        <friction>
+          <ode>
+            <mu>100.0</mu>
+            <mu2>100.0</mu2>
+          </ode>
+        </friction>
+        <contact>
+          <ode>
+            <kp>100000.0</kp>
+            <kd>10.0</kd>
+            <max_vel>0.01</max_vel>
+            <min_depth>0.002</min_depth>
+          </ode>
+        </contact>
+      </surface>
+    </collision>
+  </gazebo>
+  <gazebo>
+    <plugin filename="libgz_ros2_control-system.so" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>$(find robocon2027_competition_simulator)/config/controllers_$(arg robot_ns).yaml</parameters>
+      <controller_manager_prefix_node_name>controller_manager</controller_manager_prefix_node_name>
+      <ros>
+        <namespace>/$(arg robot_ns)</namespace>
+        <remapping>/tf:=tf</remapping>
+        <remapping>/tf_static:=tf_static</remapping>
+        </ros>
+    </plugin>
+  </gazebo>
+</robot>
